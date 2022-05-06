@@ -1,0 +1,9 @@
+{
+	"name": "Exploring-df-Megh",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a1acf4f2-737c-44e1-abf1-b77b7b426bbf",
+		"tenantId": "564d81b3-ccfd-44a8-8bbf-a1187cb5c5ff"
+	}
+}
