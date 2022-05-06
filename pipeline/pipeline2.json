@@ -1,0 +1,25 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://prod-02.eastus.logic.azure.com:443/workflows/d0db6c32631d4854b87f200462711582/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=0M4AEoywwdS-u9p0RiPAhlT2aomElaDO9r9hnlw1rYg",
+					"method": "POST"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
