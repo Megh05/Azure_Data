@@ -86,7 +86,7 @@
 				}
 			},
 			{
-				"name": "Execute Pipeline1",
+				"name": "Execute Pipeline2",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
@@ -110,7 +110,7 @@
 				"type": "AzureFunctionActivity",
 				"dependsOn": [
 					{
-						"activity": "Execute Pipeline1",
+						"activity": "Execute Pipeline2",
 						"dependencyConditions": [
 							"Succeeded"
 						]
