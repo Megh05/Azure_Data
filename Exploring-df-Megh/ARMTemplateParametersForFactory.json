@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Exploring-df-Megh"
+		},
+		"AzureBlobStorage_df_input_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage_output_connectionString": {
+			"value": ""
+		},
+		"AzureFunction1_functionKey": {
+			"value": ""
+		},
+		"df_output_service_connectionString": {
+			"value": ""
+		},
+		"AzureFunction1_properties_typeProperties_functionAppUrl": {
+			"value": "https://rolesyncgrouping20220429115818.azurewebsites.net"
+		},
+		"scheduled_trigger_properties_call_services_parameters_fileName": {
+			"value": "ExportCSV (1).csv"
+		},
+		"scheduled_trigger_properties_call_services_parameters_tableName": {
+			"value": "large_csv_table"
+		}
+	}
+}
