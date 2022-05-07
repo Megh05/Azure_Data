@@ -44,13 +44,19 @@
 				"inputs": [
 					{
 						"referenceName": "largeCSVinput",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"fileName": "ExportCSV (1).csv"
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "AzureSqlTable_csv",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"tableName": "large_csv_table"
+						}
 					}
 				]
 			},
