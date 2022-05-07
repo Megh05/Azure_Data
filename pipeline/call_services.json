@@ -46,7 +46,10 @@
 						"referenceName": "largeCSVinput",
 						"type": "DatasetReference",
 						"parameters": {
-							"fileName": "ExportCSV (1).csv"
+							"fileName": {
+								"value": "@pipeline().parameters.fileName",
+								"type": "Expression"
+							}
 						}
 					}
 				],
@@ -55,7 +58,10 @@
 						"referenceName": "AzureSqlTable_csv",
 						"type": "DatasetReference",
 						"parameters": {
-							"tableName": "large_csv_table"
+							"tableName": {
+								"value": "@pipeline().parameters.tableName",
+								"type": "Expression"
+							}
 						}
 					}
 				]
