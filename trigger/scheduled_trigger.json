@@ -1,0 +1,43 @@
+{
+	"name": "scheduled_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "call_services",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"fileName": "ExportCSV (1).csv",
+					"tableName": "large_csv_table"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Week",
+				"interval": 1,
+				"startTime": "2022-05-08T10:14:00Z",
+				"endTime": "2022-05-31T10:14:00Z",
+				"timeZone": "UTC",
+				"schedule": {
+					"minutes": [
+						30
+					],
+					"hours": [
+						1,
+						5
+					],
+					"weekDays": [
+						"Monday",
+						"Wednesday",
+						"Friday"
+					]
+				}
+			}
+		}
+	}
+}
