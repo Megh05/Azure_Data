@@ -13,6 +13,12 @@
 					"fileName": "ExportCSV (1).csv",
 					"tableName": "large_csv_table"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "pl_aggreateByGender",
+					"type": "PipelineReference"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
