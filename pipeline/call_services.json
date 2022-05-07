@@ -49,7 +49,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "Large_CSV_Table",
 						"type": "DatasetReference"
 					}
 				]
