@@ -41,7 +41,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "large_csv_table"
+			"table": "df_output_data"
 		}
 	}
 }
