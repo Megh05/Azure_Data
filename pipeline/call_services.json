@@ -112,8 +112,8 @@
 				}
 			},
 			{
-				"name": "Azure Function1",
-				"type": "AzureFunctionActivity",
+				"name": "GetDetails",
+				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
 						"activity": "Execute Pipeline2",
@@ -131,11 +131,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"functionName": "RoleSyncGrouping",
-					"method": "GET"
+					"storedProcedureName": "[dbo].[GetUserName]"
 				},
 				"linkedServiceName": {
-					"referenceName": "AzureFunction1",
+					"referenceName": "df_output_service",
 					"type": "LinkedServiceReference"
 				}
 			}
