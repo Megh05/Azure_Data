@@ -40,7 +40,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "large_csv"
+			"table": "large_csv_table"
 		}
 	}
 }
