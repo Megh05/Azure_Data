@@ -19,11 +19,21 @@
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
+				},
+				{
+					"dataset": {
+						"referenceName": "filterOutputCSV",
+						"type": "DatasetReference"
+					},
+					"name": "femaleSink"
 				}
 			],
 			"transformations": [
 				{
 					"name": "Employee"
+				},
+				{
+					"name": "femaleFilter"
 				}
 			],
 			"scriptLines": [
@@ -41,6 +51,8 @@
 				"source1 aggregate(groupBy(gender),",
 				"     Employee = collect(@(Id = id, FirstName = first_name, LastName = last_name)),",
 				"     partitionBy('hash', 1)) ~> Employee",
+				"Employee filter(gender == \"Female\",",
+				"     partitionBy('hash', 1)) ~> femaleFilter",
 				"Employee sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
@@ -51,7 +63,17 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     partitionBy('hash', 1)) ~> sink1"
+				"     partitionBy('hash', 1)) ~> sink1",
+				"femaleFilter sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          ID as string,",
+				"          {Job Title} as string,",
+				"          {Email Address} as string,",
+				"          {FirstName LastName} as string",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> femaleSink"
 			]
 		}
 	}
