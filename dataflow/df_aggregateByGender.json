@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "DelimitedText2",
+						"referenceName": "OutLargeCSV",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
@@ -42,6 +42,10 @@
 				"     Employee = collect(@(Id = id, FirstName = first_name, LastName = last_name))) ~> Employee",
 				"Employee sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     input(",
+				"          Column_1 as string,",
+				"          Column_2 as string",
+				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     partitionBy('hash', 1)) ~> sink1"
